@@ -127,6 +127,7 @@ public class CommandLineInterface {
 
         ctx.ship = new GT4500(primaryCount, primaryFailRate, secondaryCount, secondaryFailRate);
         ctx.out.println("SUCCESS");
+        ctx.out.flush();
         return CommandResult.CONTINUE;
     }
 
@@ -150,6 +151,7 @@ public class CommandLineInterface {
         }
         boolean success = ctx.ship.fireTorpedo(firingMode);
         ctx.out.println(success ? "SUCCESS" : "FAIL");
+        ctx.out.flush();
         return CommandResult.CONTINUE;
     }
 
